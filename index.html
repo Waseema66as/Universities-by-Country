@@ -88,7 +88,7 @@
 
         async function getColleges(country) {
             try {
-                let res = await axios.get(url + country);
+                let res = await axios.get(url + country, { timeout: 5000 }); 
                 console.log(res.data);
                 
                 return res.data;
